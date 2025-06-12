@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Scholarship Tracker</title>
+  <link rel="stylesheet" href="Student.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="#">HOME</a>
+      <a href="#">CONTACT</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="main-info">
+      <p>
+        Welcome to <b>SID</b>, where we track the grades of students to determine
+        eligibility for our world-renowned scholarship.
+      </p>
+      <h2>SID</h2>
+      <button id="showFormBtn">Click me</button>
+    </div>
+
+
+    <form id="studentForm" class="hidden">
+      <label>
+        Full Name:
+        <input type="text" id="name" required />
+      </label>
+
+      <label>
+        Student ID:
+        <input type="number" id="studentId" required />
+      </label>
+
+      <label>
+       <sup>st</sup>  1 Term Score:
+        <input type="number" id="term1" required />
+      </label>
+
+      <label>
+       <sup>nd</sup> 2 Term Score:
+        <input type="number" id="term2" required />
+      </label>
+
+      <label>
+        <sup>rd</sup>  3 Term Score:
+        <input type="number" id="term3" required />
+      </label>
+
+      <button type="submit">Add Student</button>
+    </form>
+
+
+    <div class="studentDisplay">
+    <table id="studentTable">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>ID</th>
+          <th> <sup>st</sup> 1 Term</th>
+          <th> <sup>nd</sup> 2 Term</th>
+          <th> <sup>rd</sup> 3 Term</th>
+          <th>Average</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        
+      </tbody>
+    </table>
+    </div>
+  </main>
+
+  <script src="Student.js"></script>
+</body>
+</html>

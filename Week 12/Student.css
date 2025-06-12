@@ -1,0 +1,211 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background-color: #f9f9f9;
+  color: #333;
+  padding: 1rem;
+}
+
+/* Header Styles */
+header {
+  background-color: #111;
+  padding: 1rem;
+  text-align: center;
+}
+
+nav a {
+  color: white;
+  margin: 0 1rem;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+
+main {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+}
+
+
+.main-info {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.main-info h2 {
+  margin-top: 0.5rem;
+  font-size: 2rem;
+  color: #007bff;
+}
+
+.main-info button {
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.main-info button:hover {
+  background-color: #0056b3;
+}
+
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  justify-content: space-between;
+}
+
+form label {
+  display: flex;
+  flex-direction: column;
+  width: 48%;
+}
+
+form input {
+  margin-top: 0.3rem;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form button {
+  padding: 0.6rem 1.2rem;
+  margin-top: 1rem;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #218838;
+}
+
+/* Table Styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 2rem;
+  font-size: 0.95rem;
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
+}
+
+th,
+td {
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+th {
+  background-color: #f1f1f1;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+
+td:last-child {
+  font-weight: bold;
+}
+
+td:last-child:contains("Eligible") {
+  color: green;
+}
+
+td:last-child:contains("Not Eligible") {
+  color: red;
+}
+
+/* Responsive Layout */
+@media (max-width: 600px) {
+  form label {
+    width: 100%;
+  }
+
+  table {
+    font-size: 0.8rem;
+  }
+
+  .main-info h2 {
+    font-size: 1.5rem;
+  }
+}
+
+/* Hidden Class */
+.hidden {
+  display: none;
+}
+
+
+
+/*
+body{
+    min-height: 100vh;
+}
+.main-info {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+nav a{
+    text-decoration: none;
+    color: #000;
+}
+nav a:hover{
+    color: rgb(12, 12, 221);
+}
+
+b{
+    font-size: x-large;
+}
+
+button{
+    background-color: rgb(12, 12, 221);
+    border-radius: 10px;
+    margin: 10px 250px;
+    padding:6px ;
+}
+
+.hidden {
+  display: none;
+}
+
+.studentDisplay{
+    gap: 40px;
+}
+
+form{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(12, 12, 221);
+     border-radius: 10px;
+    margin: 10px 350px;
+    padding:6px ;
+}
+form input{
+    gap: 10px;
+}
