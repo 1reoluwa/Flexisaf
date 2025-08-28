@@ -1,0 +1,149 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url("Images/tree.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+  width: 100vw;
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+}
+
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 80px auto;
+  flex-direction: column;
+  gap: 14px;
+  height: 200px;
+}
+
+h3 {
+  background-color: rgb(95, 237, 95);
+  padding: 1.5rem;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+h3:hover,
+button:hover {
+  border: 4px solid white;
+  cursor: pointer;
+  transition: border 0.2s ease-in-out;
+}
+
+button {
+  background-color: rgb(193, 241, 253);
+  padding: 1.2rem 2rem;
+  border-radius: 35px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+
+#countdown {
+  font-size: 80px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 50px;
+}
+
+
+.card {
+  width: 100px;          
+  height: 100px;             
+  background-color: yellow;  
+  border-radius: 10px;       
+  display: flex;             
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 2rem;          
+  transition: transform 0.3s ease; 
+}
+
+.face-down {
+  background-color: rgb(244, 244, 63);
+}
+
+.card img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+}
+
+
+#gameContainer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); 
+  grid-gap: 15px;
+  justify-content: center;
+  align-items: center;
+  width: 90vw;       
+  max-width: 600px;  
+  margin: 0 auto;    
+  height: calc(100vh - 180px); 
+}
+
+@media (min-width: 768px) {
+  .card {
+    height: 120px;
+  }
+}
+
+#scoreBoard {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 40px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #333;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 10px 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  z-index: 1000;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 80px;
+}
+
+#restartBtn,
+#pauseBtn {
+  padding: 1rem 2rem;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.message {
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.6s ease;
+  font-size: 60px; 
+  font-weight: 900;
+  color: gold;
+  text-align: center;
+  z-index: 2000;
+  pointer-events: none;
+}
+
+.message.show {
+  opacity: 1;
+}

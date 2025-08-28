@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Memory Game</title>
+  <link rel="stylesheet" href="Index.css">
+  <script src="Index.js" defer></script>
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Young+Serif&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+
+  <div id="scoreBoard">
+    <span id="attempts">Attempts: 0</span> | 
+    <span id="time">Time: 0s</span>
+  </div>
+
+
+  <div id="messageBox" class="message"></div>
+
+
+  <div class="controls">
+    <button id="restartBtn" type="button" class="control-btn">
+      RESTART <i class="fas fa-rotate-right"></i>
+    </button>
+    <button id="pauseBtn" type="button" class="control-btn">
+      PAUSE <i class="fas fa-pause"></i>
+    </button>
+  </div>
+
+
+  <div id="categoryContainer" class="container">
+    <h3>CATEGORIES</h3>
+    <select id="categorySelect">
+      <option value="Alphabets">Alphabets</option>
+      <option value="Vegetables">Vegetables</option>
+      <option value="Animals">Animals</option>
+      <option value="Nature">Nature</option>
+      <option value="Social Media">Social Media</option>
+      <option value="Flags">Flags</option>
+    </select>
+    <button type="button" onclick="startCountdown()">START</button>
+  </div>
+
+  
+  <div id="countdown" style="display:none;"></div>
+
+
+  <div id="gameContainer" style="display:none;">
+    <div id="gameBoard"></div>
+  </div>
+
+<audio id="bg-music" src="Final project.mp3" autoplay loop></audio>
+
+<audio id="bg-music" src="Final project.mp3" loop></audio>
+
+</body>
+</html>
